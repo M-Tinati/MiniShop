@@ -1,0 +1,16 @@
+E:\سی شارپ\MiniShop\MiniShop\bin\Debug\net10.0-windows\MiniShop.exe
+E:\سی شارپ\MiniShop\MiniShop\bin\Debug\net10.0-windows\MiniShop.deps.json
+E:\سی شارپ\MiniShop\MiniShop\bin\Debug\net10.0-windows\MiniShop.runtimeconfig.json
+E:\سی شارپ\MiniShop\MiniShop\bin\Debug\net10.0-windows\MiniShop.dll
+E:\سی شارپ\MiniShop\MiniShop\bin\Debug\net10.0-windows\MiniShop.pdb
+E:\سی شارپ\MiniShop\MiniShop\obj\Debug\net10.0-windows\MiniShop.Form1.resources
+E:\سی شارپ\MiniShop\MiniShop\obj\Debug\net10.0-windows\MiniShop.csproj.GenerateResource.cache
+E:\سی شارپ\MiniShop\MiniShop\obj\Debug\net10.0-windows\MiniShop.GeneratedMSBuildEditorConfig.editorconfig
+E:\سی شارپ\MiniShop\MiniShop\obj\Debug\net10.0-windows\MiniShop.AssemblyInfoInputs.cache
+E:\سی شارپ\MiniShop\MiniShop\obj\Debug\net10.0-windows\MiniShop.AssemblyInfo.cs
+E:\سی شارپ\MiniShop\MiniShop\obj\Debug\net10.0-windows\MiniShop.csproj.CoreCompileInputs.cache
+E:\سی شارپ\MiniShop\MiniShop\obj\Debug\net10.0-windows\MiniShop.dll
+E:\سی شارپ\MiniShop\MiniShop\obj\Debug\net10.0-windows\refint\MiniShop.dll
+E:\سی شارپ\MiniShop\MiniShop\obj\Debug\net10.0-windows\MiniShop.pdb
+E:\سی شارپ\MiniShop\MiniShop\obj\Debug\net10.0-windows\MiniShop.genruntimeconfig.cache
+E:\سی شارپ\MiniShop\MiniShop\obj\Debug\net10.0-windows\ref\MiniShop.dll
