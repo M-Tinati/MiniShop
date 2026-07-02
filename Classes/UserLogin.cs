@@ -6,6 +6,8 @@ namespace MiniShop.Classes
 {
     internal class UserLogin
     {
+
+        //اگر init تعریف کنم چمیشه؟ 
         public string Username { get; set; }
         public string Password { get; set; }
 
