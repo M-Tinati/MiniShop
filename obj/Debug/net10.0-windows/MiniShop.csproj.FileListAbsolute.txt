@@ -15,3 +15,11 @@ E:\سی شارپ\MiniShop\MiniShop\obj\Debug\net10.0-windows\MiniShop.genruntime
 E:\سی شارپ\MiniShop\MiniShop\obj\Debug\net10.0-windows\ref\MiniShop.dll
 E:\سی شارپ\MiniShop\MiniShop\obj\Debug\net10.0-windows\MiniShop.Forms.FrmLogin.resources
 E:\سی شارپ\MiniShop\MiniShop\obj\Debug\net10.0-windows\MiniShop.Forms.FrmPanel.resources
+E:\سی شارپ\MiniShop\MiniShop\bin\Debug\net10.0-windows\System.Data.SQLite.dll
+E:\سی شارپ\MiniShop\MiniShop\bin\Debug\net10.0-windows\runtimes\linux-x64\native\SQLite.Interop.dll
+E:\سی شارپ\MiniShop\MiniShop\bin\Debug\net10.0-windows\runtimes\osx-x64\native\SQLite.Interop.dll
+E:\سی شارپ\MiniShop\MiniShop\bin\Debug\net10.0-windows\runtimes\win-x64\native\SQLite.Interop.dll
+E:\سی شارپ\MiniShop\MiniShop\bin\Debug\net10.0-windows\runtimes\win-x86\native\SQLite.Interop.dll
+E:\سی شارپ\MiniShop\MiniShop\obj\Debug\net10.0-windows\MiniShop.csproj.AssemblyReference.cache
+E:\سی شارپ\MiniShop\MiniShop\obj\Debug\net10.0-windows\MiniShop.sourcelink.json
+E:\سی شارپ\MiniShop\MiniShop\obj\Debug\net10.0-windows\MiniShop.csproj.Up2Date
