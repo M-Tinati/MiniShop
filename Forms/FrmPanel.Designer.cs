@@ -32,7 +32,15 @@
             tabControl = new TabControl();
             TapPageProdouct = new TabPage();
             dgvProducts = new DataGridView();
+            ID = new DataGridViewTextBoxColumn();
+            nameProduct = new DataGridViewTextBoxColumn();
+            countPoduct = new DataGridViewTextBoxColumn();
+            priceProduct = new DataGridViewTextBoxColumn();
+            profitProduct = new DataGridViewTextBoxColumn();
             groupBoxAmont = new GroupBox();
+            label1 = new Label();
+            comboBoxProducts = new ComboBox();
+            LblNameMini = new Label();
             groupBoxAddProducts = new GroupBox();
             NumProductProfit = new NumericUpDown();
             NumProductBuy = new NumericUpDown();
@@ -49,9 +57,6 @@
             toolStrip1 = new ToolStrip();
             toolStripDropDownButton = new ToolStripDropDownButton();
             خروجToolStripMenuItem = new ToolStripMenuItem();
-            LblNameMini = new Label();
-            comboBoxProducts = new ComboBox();
-            label1 = new Label();
             tabControl.SuspendLayout();
             TapPageProdouct.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvProducts).BeginInit();
@@ -89,11 +94,57 @@
             // 
             // dgvProducts
             // 
+            dgvProducts.AllowUserToAddRows = false;
+            dgvProducts.AllowUserToDeleteRows = false;
+            dgvProducts.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             dgvProducts.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvProducts.Columns.AddRange(new DataGridViewColumn[] { ID, nameProduct, countPoduct, priceProduct, profitProduct });
             dgvProducts.Location = new Point(8, 238);
             dgvProducts.Name = "dgvProducts";
+            dgvProducts.ReadOnly = true;
             dgvProducts.Size = new Size(845, 201);
             dgvProducts.TabIndex = 2;
+            // 
+            // ID
+            // 
+            ID.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            ID.DataPropertyName = "ID";
+            ID.HeaderText = "ردیف";
+            ID.Name = "ID";
+            ID.ReadOnly = true;
+            ID.Width = 58;
+            // 
+            // nameProduct
+            // 
+            nameProduct.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            nameProduct.DataPropertyName = "nameProduct";
+            nameProduct.HeaderText = "نام کالا";
+            nameProduct.Name = "nameProduct";
+            nameProduct.ReadOnly = true;
+            // 
+            // countPoduct
+            // 
+            countPoduct.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            countPoduct.DataPropertyName = "countPoduct";
+            countPoduct.HeaderText = "تعداد کالا";
+            countPoduct.Name = "countPoduct";
+            countPoduct.ReadOnly = true;
+            // 
+            // priceProduct
+            // 
+            priceProduct.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            priceProduct.DataPropertyName = "priceProduct";
+            priceProduct.HeaderText = "قیمت خرید کالا";
+            priceProduct.Name = "priceProduct";
+            priceProduct.ReadOnly = true;
+            // 
+            // profitProduct
+            // 
+            profitProduct.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            profitProduct.DataPropertyName = "profitProduct";
+            profitProduct.HeaderText = "درصد سود کالا";
+            profitProduct.Name = "profitProduct";
+            profitProduct.ReadOnly = true;
             // 
             // groupBoxAmont
             // 
@@ -106,6 +157,32 @@
             groupBoxAmont.TabIndex = 1;
             groupBoxAmont.TabStop = false;
             groupBoxAmont.Text = "Mini انبار";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(419, 88);
+            label1.Name = "label1";
+            label1.Size = new Size(76, 15);
+            label1.TabIndex = 2;
+            label1.Text = "تعداد کل خرید";
+            // 
+            // comboBoxProducts
+            // 
+            comboBoxProducts.FormattingEnabled = true;
+            comboBoxProducts.Location = new Point(267, 33);
+            comboBoxProducts.Name = "comboBoxProducts";
+            comboBoxProducts.Size = new Size(169, 23);
+            comboBoxProducts.TabIndex = 1;
+            // 
+            // LblNameMini
+            // 
+            LblNameMini.AutoSize = true;
+            LblNameMini.Location = new Point(455, 36);
+            LblNameMini.Name = "LblNameMini";
+            LblNameMini.Size = new Size(40, 15);
+            LblNameMini.TabIndex = 0;
+            LblNameMini.Text = "نام کالا";
             // 
             // groupBoxAddProducts
             // 
@@ -169,6 +246,7 @@
             BtnAdd.TabIndex = 6;
             BtnAdd.Text = "افزودن";
             BtnAdd.UseVisualStyleBackColor = true;
+            BtnAdd.Click += BtnAdd_Click;
             // 
             // BtnEdit
             // 
@@ -258,35 +336,9 @@
             // خروجToolStripMenuItem
             // 
             خروجToolStripMenuItem.Name = "خروجToolStripMenuItem";
-            خروجToolStripMenuItem.Size = new Size(180, 22);
+            خروجToolStripMenuItem.Size = new Size(99, 22);
             خروجToolStripMenuItem.Text = "خروج";
             خروجToolStripMenuItem.Click += خروجToolStripMenuItem_Click;
-            // 
-            // LblNameMini
-            // 
-            LblNameMini.AutoSize = true;
-            LblNameMini.Location = new Point(455, 36);
-            LblNameMini.Name = "LblNameMini";
-            LblNameMini.Size = new Size(40, 15);
-            LblNameMini.TabIndex = 0;
-            LblNameMini.Text = "نام کالا";
-            // 
-            // comboBoxProducts
-            // 
-            comboBoxProducts.FormattingEnabled = true;
-            comboBoxProducts.Location = new Point(267, 33);
-            comboBoxProducts.Name = "comboBoxProducts";
-            comboBoxProducts.Size = new Size(169, 23);
-            comboBoxProducts.TabIndex = 1;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(419, 88);
-            label1.Name = "label1";
-            label1.Size = new Size(76, 15);
-            label1.TabIndex = 2;
-            label1.Text = "تعداد کل خرید";
             // 
             // FrmPanel
             // 
@@ -343,5 +395,10 @@
         private Label label1;
         private ComboBox comboBoxProducts;
         private Label LblNameMini;
+        private DataGridViewTextBoxColumn ID;
+        private DataGridViewTextBoxColumn nameProduct;
+        private DataGridViewTextBoxColumn countPoduct;
+        private DataGridViewTextBoxColumn priceProduct;
+        private DataGridViewTextBoxColumn profitProduct;
     }
 }
