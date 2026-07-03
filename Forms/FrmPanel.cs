@@ -5,12 +5,14 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using System.Data.SQLite;
 
 namespace MiniShop.Forms
 {
     public partial class FrmPanel : Form
-    {
+    {        
         FrmLogin frmlogin = new();
+        SQLiteConnection con = new SQLiteConnection("DataSource=minishopDB");
         public FrmPanel()
         {
             InitializeComponent();
