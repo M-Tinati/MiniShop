@@ -41,7 +41,14 @@ namespace MiniShop.Forms
             dgvProducts.DataSource = dt;
             dgvProducts.Columns["priceProduct"].DefaultCellStyle.Format = "N0";
         }
-
+        /*
+         * بخش افزودن رو باید اپدیت و فیکس بکنی
+         * ضرب تعداد کالا بر فی
+         *nameProduct
+         *countPoduct
+         *priceProduct
+         *profitProduct
+         */
         private void BtnAdd_Click(object sender, EventArgs e)
         {
             string Q_ADD = "INSERT INTO ProductInsert (nameProduct,countPoduct,priceProduct,profitProduct) VALUES(@name,@count,@price,@profit)";
@@ -56,9 +63,5 @@ namespace MiniShop.Forms
             Refresh();
             MessageBox.Show("ذخیره شد");
         }
-//        nameProduct
-//        countPoduct
-//        priceProduct
-//        profitProduct
     }
 }
