@@ -23,6 +23,7 @@ namespace MiniShop.Forms
         private void FrmPanel_Load(object sender, EventArgs e)
         {
             frmlogin.ShowDialog();
+            Refresh();
         }
 
         private void خروجToolStripMenuItem_Click(object sender, EventArgs e)
@@ -62,6 +63,23 @@ namespace MiniShop.Forms
             con.Close();
             Refresh();
             MessageBox.Show("ذخیره شد");
+        }
+
+        private void BtnEdit_Click(object sender, EventArgs e)
+        {
+            string Q_UPDATE = "UPDATE ProductInsert SET nameProduct=@name,countPoduct=@count,priceProduct=@price,profitProduct=@profit WHERE ID=@ID";
+            SQLiteCommand cmd = new SQLiteCommand(Q_UPDATE, con);
+            cmd.Parameters.AddWithValue("@ID", NumIdEdit.Text);
+            cmd.Parameters.AddWithValue("@name", TxtNameEdit.Text);
+            cmd.Parameters.AddWithValue("@price", NumPriceEdit.Value);
+            cmd.Parameters.AddWithValue("@count", NumCountEdit.Value);
+            cmd.Parameters.AddWithValue("@profit", NumProfitEdit.Value);
+            con.Open();
+            cmd.ExecuteNonQuery();
+            con.Close();
+            Refresh();
+            MessageBox.Show("ویرایش انجام شد");
+
         }
     }
 }

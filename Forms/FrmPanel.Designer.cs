@@ -38,17 +38,24 @@
             priceProduct = new DataGridViewTextBoxColumn();
             profitProduct = new DataGridViewTextBoxColumn();
             groupBoxAmont = new GroupBox();
+            NumProfitEdit = new NumericUpDown();
+            label5 = new Label();
             label1 = new Label();
-            comboBoxProducts = new ComboBox();
-            LblNameMini = new Label();
+            NumPriceEdit = new NumericUpDown();
+            label2 = new Label();
+            NumIdEdit = new NumericUpDown();
+            NumCountEdit = new NumericUpDown();
+            BtnDelete = new Button();
+            BtnEdit = new Button();
+            label3 = new Label();
+            TxtNameEdit = new TextBox();
+            label4 = new Label();
             groupBoxAddProducts = new GroupBox();
             NumProductProfit = new NumericUpDown();
             NumProductBuy = new NumericUpDown();
             NumProductCount = new NumericUpDown();
             TxtProductName = new TextBox();
             BtnAdd = new Button();
-            BtnEdit = new Button();
-            BtnDelete = new Button();
             LblProfitProduct = new Label();
             LblBuyProduct = new Label();
             LblCountProduct = new Label();
@@ -61,6 +68,10 @@
             TapPageProdouct.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvProducts).BeginInit();
             groupBoxAmont.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)NumProfitEdit).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)NumPriceEdit).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)NumIdEdit).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)NumCountEdit).BeginInit();
             groupBoxAddProducts.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)NumProductProfit).BeginInit();
             ((System.ComponentModel.ISupportInitialize)NumProductBuy).BeginInit();
@@ -148,9 +159,18 @@
             // 
             // groupBoxAmont
             // 
+            groupBoxAmont.Controls.Add(NumProfitEdit);
+            groupBoxAmont.Controls.Add(label5);
             groupBoxAmont.Controls.Add(label1);
-            groupBoxAmont.Controls.Add(comboBoxProducts);
-            groupBoxAmont.Controls.Add(LblNameMini);
+            groupBoxAmont.Controls.Add(NumPriceEdit);
+            groupBoxAmont.Controls.Add(label2);
+            groupBoxAmont.Controls.Add(NumIdEdit);
+            groupBoxAmont.Controls.Add(NumCountEdit);
+            groupBoxAmont.Controls.Add(BtnDelete);
+            groupBoxAmont.Controls.Add(BtnEdit);
+            groupBoxAmont.Controls.Add(label3);
+            groupBoxAmont.Controls.Add(TxtNameEdit);
+            groupBoxAmont.Controls.Add(label4);
             groupBoxAmont.Location = new Point(345, 6);
             groupBoxAmont.Name = "groupBoxAmont";
             groupBoxAmont.Size = new Size(508, 226);
@@ -158,31 +178,112 @@
             groupBoxAmont.TabStop = false;
             groupBoxAmont.Text = "Mini انبار";
             // 
+            // NumProfitEdit
+            // 
+            NumProfitEdit.Location = new Point(208, 146);
+            NumProfitEdit.Maximum = new decimal(new int[] { 1215752192, 23, 0, 0 });
+            NumProfitEdit.Name = "NumProfitEdit";
+            NumProfitEdit.Size = new Size(204, 23);
+            NumProfitEdit.TabIndex = 10;
+            NumProfitEdit.ThousandsSeparator = true;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(122, 154);
+            label5.Name = "label5";
+            label5.Size = new Size(33, 15);
+            label5.TabIndex = 0;
+            label5.Text = "ردیف";
+            // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(419, 88);
+            label1.Location = new Point(462, 31);
             label1.Name = "label1";
-            label1.Size = new Size(76, 15);
-            label1.TabIndex = 2;
-            label1.Text = "تعداد کل خرید";
+            label1.Size = new Size(40, 15);
+            label1.TabIndex = 0;
+            label1.Text = "نام کالا";
             // 
-            // comboBoxProducts
+            // NumPriceEdit
             // 
-            comboBoxProducts.FormattingEnabled = true;
-            comboBoxProducts.Location = new Point(267, 33);
-            comboBoxProducts.Name = "comboBoxProducts";
-            comboBoxProducts.Size = new Size(169, 23);
-            comboBoxProducts.TabIndex = 1;
+            NumPriceEdit.Location = new Point(208, 108);
+            NumPriceEdit.Maximum = new decimal(new int[] { 1215752192, 23, 0, 0 });
+            NumPriceEdit.Name = "NumPriceEdit";
+            NumPriceEdit.Size = new Size(204, 23);
+            NumPriceEdit.TabIndex = 9;
+            NumPriceEdit.ThousandsSeparator = true;
             // 
-            // LblNameMini
+            // label2
             // 
-            LblNameMini.AutoSize = true;
-            LblNameMini.Location = new Point(455, 36);
-            LblNameMini.Name = "LblNameMini";
-            LblNameMini.Size = new Size(40, 15);
-            LblNameMini.TabIndex = 0;
-            LblNameMini.Text = "نام کالا";
+            label2.AutoSize = true;
+            label2.Location = new Point(468, 69);
+            label2.Name = "label2";
+            label2.Size = new Size(33, 15);
+            label2.TabIndex = 1;
+            label2.Text = "تعداد";
+            // 
+            // NumIdEdit
+            // 
+            NumIdEdit.Location = new Point(31, 152);
+            NumIdEdit.Maximum = new decimal(new int[] { 1215752192, 23, 0, 0 });
+            NumIdEdit.Name = "NumIdEdit";
+            NumIdEdit.Size = new Size(75, 23);
+            NumIdEdit.TabIndex = 8;
+            NumIdEdit.ThousandsSeparator = true;
+            // 
+            // NumCountEdit
+            // 
+            NumCountEdit.Location = new Point(208, 67);
+            NumCountEdit.Maximum = new decimal(new int[] { 1215752192, 23, 0, 0 });
+            NumCountEdit.Name = "NumCountEdit";
+            NumCountEdit.Size = new Size(204, 23);
+            NumCountEdit.TabIndex = 8;
+            NumCountEdit.ThousandsSeparator = true;
+            // 
+            // BtnDelete
+            // 
+            BtnDelete.Location = new Point(31, 187);
+            BtnDelete.Name = "BtnDelete";
+            BtnDelete.Size = new Size(124, 28);
+            BtnDelete.TabIndex = 4;
+            BtnDelete.Text = "حذف";
+            BtnDelete.UseVisualStyleBackColor = true;
+            // 
+            // BtnEdit
+            // 
+            BtnEdit.Location = new Point(208, 187);
+            BtnEdit.Name = "BtnEdit";
+            BtnEdit.Size = new Size(204, 28);
+            BtnEdit.TabIndex = 5;
+            BtnEdit.Text = "ویرایش";
+            BtnEdit.UseVisualStyleBackColor = true;
+            BtnEdit.Click += BtnEdit_Click;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(441, 110);
+            label3.Name = "label3";
+            label3.Size = new Size(61, 15);
+            label3.TabIndex = 2;
+            label3.Text = "قیمت خرید";
+            // 
+            // TxtNameEdit
+            // 
+            TxtNameEdit.Location = new Point(208, 28);
+            TxtNameEdit.Name = "TxtNameEdit";
+            TxtNameEdit.Size = new Size(204, 23);
+            TxtNameEdit.TabIndex = 7;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(441, 146);
+            label4.Name = "label4";
+            label4.Size = new Size(60, 15);
+            label4.TabIndex = 3;
+            label4.Text = "درصد سود";
             // 
             // groupBoxAddProducts
             // 
@@ -191,8 +292,6 @@
             groupBoxAddProducts.Controls.Add(NumProductCount);
             groupBoxAddProducts.Controls.Add(TxtProductName);
             groupBoxAddProducts.Controls.Add(BtnAdd);
-            groupBoxAddProducts.Controls.Add(BtnEdit);
-            groupBoxAddProducts.Controls.Add(BtnDelete);
             groupBoxAddProducts.Controls.Add(LblProfitProduct);
             groupBoxAddProducts.Controls.Add(LblBuyProduct);
             groupBoxAddProducts.Controls.Add(LblCountProduct);
@@ -242,29 +341,11 @@
             // 
             BtnAdd.Location = new Point(20, 187);
             BtnAdd.Name = "BtnAdd";
-            BtnAdd.Size = new Size(74, 28);
+            BtnAdd.Size = new Size(204, 28);
             BtnAdd.TabIndex = 6;
             BtnAdd.Text = "افزودن";
             BtnAdd.UseVisualStyleBackColor = true;
             BtnAdd.Click += BtnAdd_Click;
-            // 
-            // BtnEdit
-            // 
-            BtnEdit.Location = new Point(129, 187);
-            BtnEdit.Name = "BtnEdit";
-            BtnEdit.Size = new Size(71, 28);
-            BtnEdit.TabIndex = 5;
-            BtnEdit.Text = "ویرایش";
-            BtnEdit.UseVisualStyleBackColor = true;
-            // 
-            // BtnDelete
-            // 
-            BtnDelete.Location = new Point(238, 187);
-            BtnDelete.Name = "BtnDelete";
-            BtnDelete.Size = new Size(75, 28);
-            BtnDelete.TabIndex = 4;
-            BtnDelete.Text = "حذف";
-            BtnDelete.UseVisualStyleBackColor = true;
             // 
             // LblProfitProduct
             // 
@@ -359,6 +440,10 @@
             ((System.ComponentModel.ISupportInitialize)dgvProducts).EndInit();
             groupBoxAmont.ResumeLayout(false);
             groupBoxAmont.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)NumProfitEdit).EndInit();
+            ((System.ComponentModel.ISupportInitialize)NumPriceEdit).EndInit();
+            ((System.ComponentModel.ISupportInitialize)NumIdEdit).EndInit();
+            ((System.ComponentModel.ISupportInitialize)NumCountEdit).EndInit();
             groupBoxAddProducts.ResumeLayout(false);
             groupBoxAddProducts.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)NumProductProfit).EndInit();
@@ -392,13 +477,20 @@
         private ToolStrip toolStrip1;
         private ToolStripDropDownButton toolStripDropDownButton;
         private ToolStripMenuItem خروجToolStripMenuItem;
-        private Label label1;
-        private ComboBox comboBoxProducts;
-        private Label LblNameMini;
         private DataGridViewTextBoxColumn ID;
         private DataGridViewTextBoxColumn nameProduct;
         private DataGridViewTextBoxColumn countPoduct;
         private DataGridViewTextBoxColumn priceProduct;
         private DataGridViewTextBoxColumn profitProduct;
+        private NumericUpDown NumProfitEdit;
+        private Label label1;
+        private NumericUpDown NumPriceEdit;
+        private Label label2;
+        private NumericUpDown NumCountEdit;
+        private Label label3;
+        private TextBox TxtNameEdit;
+        private Label label4;
+        private Label label5;
+        private NumericUpDown NumIdEdit;
     }
 }
