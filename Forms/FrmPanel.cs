@@ -65,6 +65,7 @@ namespace MiniShop.Forms
             MessageBox.Show("ذخیره شد");
         }
 
+        
         private void BtnEdit_Click(object sender, EventArgs e)
         {
             string Q_UPDATE = "UPDATE ProductInsert SET nameProduct=@name,countPoduct=@count,priceProduct=@price,profitProduct=@profit WHERE ID=@ID";
@@ -80,6 +81,18 @@ namespace MiniShop.Forms
             Refresh();
             MessageBox.Show("ویرایش انجام شد");
 
+        }
+
+        private void BtnDelete_Click(object sender, EventArgs e)
+        {
+            string Q_DELETE = "DELETE FROM ProductInsert WHERE ID=@ID";
+            SQLiteCommand cmd = new SQLiteCommand(Q_DELETE, con);
+            cmd.Parameters.AddWithValue("@ID", NumIdEdit.Text);
+            con.Open();
+            cmd.ExecuteNonQuery();
+            con.Close();
+            Refresh();
+            MessageBox.Show("حذف انجام شد");
         }
     }
 }

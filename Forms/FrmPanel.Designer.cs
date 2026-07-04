@@ -249,6 +249,7 @@
             BtnDelete.TabIndex = 4;
             BtnDelete.Text = "حذف";
             BtnDelete.UseVisualStyleBackColor = true;
+            BtnDelete.Click += BtnDelete_Click;
             // 
             // BtnEdit
             // 
