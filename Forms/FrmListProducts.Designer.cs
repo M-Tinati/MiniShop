@@ -32,6 +32,7 @@
             ListName = new DataGridViewTextBoxColumn();
             ListCount = new DataGridViewTextBoxColumn();
             ListPrice = new DataGridViewTextBoxColumn();
+            Total = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dgvList).BeginInit();
             SuspendLayout();
             // 
@@ -41,7 +42,7 @@
             dgvList.AllowUserToDeleteRows = false;
             dgvList.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvList.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvList.Columns.AddRange(new DataGridViewColumn[] { ListName, ListCount, ListPrice });
+            dgvList.Columns.AddRange(new DataGridViewColumn[] { ListName, ListCount, ListPrice, Total });
             dgvList.Dock = DockStyle.Fill;
             dgvList.Location = new Point(0, 0);
             dgvList.Name = "dgvList";
@@ -63,9 +64,15 @@
             // 
             // ListPrice
             // 
-            ListPrice.HeaderText = "جمع کل";
+            ListPrice.HeaderText = "فی";
             ListPrice.Name = "ListPrice";
             ListPrice.ReadOnly = true;
+            // 
+            // Total
+            // 
+            Total.HeaderText = "جمع کل";
+            Total.Name = "Total";
+            Total.ReadOnly = true;
             // 
             // FrmListProducts
             // 
@@ -90,5 +97,6 @@
         private DataGridViewTextBoxColumn ListName;
         private DataGridViewTextBoxColumn ListCount;
         private DataGridViewTextBoxColumn ListPrice;
+        private DataGridViewTextBoxColumn Total;
     }
 }

@@ -18,8 +18,6 @@ namespace MiniShop.Forms
         public FrmPanel()
         {
             InitializeComponent();
-            string name12 = dgvProducts.CurrentRow.Cells[2].Value.ToString();
-
         }
 
         private void FrmPanel_Load(object sender, EventArgs e)
@@ -82,6 +80,12 @@ namespace MiniShop.Forms
             con.Close();
             Refresh();
             MessageBox.Show("ویرایش انجام شد");
+            NumIdEdit.Value = 0;
+            TxtNameEdit.Text = "";
+            NumPriceEdit.Value = 0;
+            NumCountEdit.Value = 0;
+            NumProfitEdit.Value = 0;
+
 
         }
 
@@ -98,26 +102,18 @@ namespace MiniShop.Forms
         }
 
 
-
+        /// <summary>
+        /// داده های دیتاگریدویو رو توی فرم دوم میبرم
+        /// باید ازش نمونه بسازم که توی کاسنتارکتورش تون دیتاگرید ویو مد نظرمو اضافه کنم
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ListBuyProducts_Click(object sender, EventArgs e)
         {
-            FrmListProducts ListProducts = new();
-            //ListProducts.ShowDialog();
-            foreach (DataGridViewRow item in dgvProducts.Rows)
-            {
-                string name = dgvProducts.CurrentRow.Cells[2].Value.ToString();
-                MessageBox.Show(name);
-            }
-
-            
-
+            FrmListProducts frm2 = new(dgvProducts);
+            frm2.ShowDialog();
         }
         
-
-
-        
-
-
-
     }
+    
 }
