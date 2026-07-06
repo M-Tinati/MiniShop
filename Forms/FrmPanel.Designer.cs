@@ -38,6 +38,7 @@
             priceProduct = new DataGridViewTextBoxColumn();
             profitProduct = new DataGridViewTextBoxColumn();
             groupBoxAmont = new GroupBox();
+            ListBuyProducts = new Button();
             NumProfitEdit = new NumericUpDown();
             label5 = new Label();
             label1 = new Label();
@@ -159,6 +160,7 @@
             // 
             // groupBoxAmont
             // 
+            groupBoxAmont.Controls.Add(ListBuyProducts);
             groupBoxAmont.Controls.Add(NumProfitEdit);
             groupBoxAmont.Controls.Add(label5);
             groupBoxAmont.Controls.Add(label1);
@@ -177,6 +179,16 @@
             groupBoxAmont.TabIndex = 1;
             groupBoxAmont.TabStop = false;
             groupBoxAmont.Text = "Mini انبار";
+            // 
+            // ListBuyProducts
+            // 
+            ListBuyProducts.Location = new Point(6, 13);
+            ListBuyProducts.Name = "ListBuyProducts";
+            ListBuyProducts.Size = new Size(159, 24);
+            ListBuyProducts.TabIndex = 11;
+            ListBuyProducts.Text = "لیست کالا های خریداری شده";
+            ListBuyProducts.UseVisualStyleBackColor = true;
+            ListBuyProducts.Click += ListBuyProducts_Click;
             // 
             // NumProfitEdit
             // 
@@ -461,7 +473,6 @@
         private TabControl tabControl;
         private TabPage TapPageProdouct;
         private TabPage tabPage2;
-        private DataGridView dgvProducts;
         private GroupBox groupBoxAmont;
         private GroupBox groupBoxAddProducts;
         private Label LblProfitProduct;
@@ -493,5 +504,7 @@
         private Label label4;
         private Label label5;
         private NumericUpDown NumIdEdit;
+        private Button ListBuyProducts;
+        public DataGridView dgvProducts;
     }
 }

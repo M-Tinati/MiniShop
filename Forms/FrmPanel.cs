@@ -18,6 +18,8 @@ namespace MiniShop.Forms
         public FrmPanel()
         {
             InitializeComponent();
+            string name12 = dgvProducts.CurrentRow.Cells[2].Value.ToString();
+
         }
 
         private void FrmPanel_Load(object sender, EventArgs e)
@@ -65,7 +67,7 @@ namespace MiniShop.Forms
             MessageBox.Show("ذخیره شد");
         }
 
-        
+
         private void BtnEdit_Click(object sender, EventArgs e)
         {
             string Q_UPDATE = "UPDATE ProductInsert SET nameProduct=@name,countPoduct=@count,priceProduct=@price,profitProduct=@profit WHERE ID=@ID";
@@ -94,5 +96,28 @@ namespace MiniShop.Forms
             Refresh();
             MessageBox.Show("حذف انجام شد");
         }
+
+
+
+        private void ListBuyProducts_Click(object sender, EventArgs e)
+        {
+            FrmListProducts ListProducts = new();
+            //ListProducts.ShowDialog();
+            foreach (DataGridViewRow item in dgvProducts.Rows)
+            {
+                string name = dgvProducts.CurrentRow.Cells[2].Value.ToString();
+                MessageBox.Show(name);
+            }
+
+            
+
+        }
+        
+
+
+        
+
+
+
     }
 }
