@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SQLite;
 using System.Drawing;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Windows.Forms;
 using System.Xml.Linq;
@@ -42,14 +43,7 @@ namespace MiniShop.Forms
             dgvProducts.DataSource = dt;
             dgvProducts.Columns["priceProduct"].DefaultCellStyle.Format = "N0";
         }
-        /*
-         * بخش افزودن رو باید اپدیت و فیکس بکنی
-         * ضرب تعداد کالا بر فی
-         *nameProduct
-         *countPoduct
-         *priceProduct
-         *profitProduct
-         */
+
         private void BtnAdd_Click(object sender, EventArgs e)
         {
             string Q_ADD = "INSERT INTO ProductInsert (nameProduct,countPoduct,priceProduct,profitProduct) VALUES(@name,@count,@price,@profit)";
@@ -70,35 +64,56 @@ namespace MiniShop.Forms
         {
             string Q_UPDATE = "UPDATE ProductInsert SET nameProduct=@name,countPoduct=@count,priceProduct=@price,profitProduct=@profit WHERE ID=@ID";
             SQLiteCommand cmd = new SQLiteCommand(Q_UPDATE, con);
-            cmd.Parameters.AddWithValue("@ID", NumIdEdit.Text);
-            cmd.Parameters.AddWithValue("@name", TxtNameEdit.Text);
-            cmd.Parameters.AddWithValue("@price", NumPriceEdit.Value);
-            cmd.Parameters.AddWithValue("@count", NumCountEdit.Value);
-            cmd.Parameters.AddWithValue("@profit", NumProfitEdit.Value);
-            con.Open();
-            cmd.ExecuteNonQuery();
-            con.Close();
-            Refresh();
-            MessageBox.Show("ویرایش انجام شد");
-            NumIdEdit.Value = 0;
+            void Update()
+            {
+                cmd.Parameters.AddWithValue("@ID", NumIdEdit.Value);
+                cmd.Parameters.AddWithValue("@name", TxtNameEdit.Text);
+                cmd.Parameters.AddWithValue("@price", NumPriceEdit.Value);
+                cmd.Parameters.AddWithValue("@count", NumCountEdit.Value);
+                cmd.Parameters.AddWithValue("@profit", NumProfitEdit.Value);
+                con.Open();
+                cmd.ExecuteNonQuery();
+                con.Close();
+                Refresh();
+                MessageBox.Show("ویرایش انجام شد");
+            }
+
+            if (TxtNameEdit.Text == "")
+            {
+                MessageBox.Show("نام کالا نباید خالی باشد");
+            }
+            else if (NumIdEdit.Value == 0)
+            {
+                MessageBox.Show("ردیف را انتخاب کنید");
+            }
+            else
+            {
+                Update();
+            }
             TxtNameEdit.Text = "";
             NumPriceEdit.Value = 0;
             NumCountEdit.Value = 0;
             NumProfitEdit.Value = 0;
-
-
         }
 
         private void BtnDelete_Click(object sender, EventArgs e)
         {
-            string Q_DELETE = "DELETE FROM ProductInsert WHERE ID=@ID";
-            SQLiteCommand cmd = new SQLiteCommand(Q_DELETE, con);
-            cmd.Parameters.AddWithValue("@ID", NumIdEdit.Text);
-            con.Open();
-            cmd.ExecuteNonQuery();
-            con.Close();
-            Refresh();
-            MessageBox.Show("حذف انجام شد");
+            if (NumIdEdit.Value == 0)
+            {
+                MessageBox.Show("ردیف را انتخاب کنید");
+            }
+            else
+            {
+                string Q_DELETE = "DELETE FROM ProductInsert WHERE ID=@ID";
+                SQLiteCommand cmd = new SQLiteCommand(Q_DELETE, con);
+                cmd.Parameters.AddWithValue("@ID", NumIdEdit.Text);
+                con.Open();
+                cmd.ExecuteNonQuery();
+                con.Close();
+                Refresh();
+                MessageBox.Show("حذف انجام شد");
+                NumIdEdit.Value = 0;
+            }
         }
 
 
@@ -113,7 +128,7 @@ namespace MiniShop.Forms
             FrmListProducts frm2 = new(dgvProducts);
             frm2.ShowDialog();
         }
-        
+
     }
-    
+
 }

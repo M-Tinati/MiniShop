@@ -89,7 +89,7 @@
             tabControl.Name = "tabControl";
             tabControl.SelectedIndex = 0;
             tabControl.Size = new Size(869, 473);
-            tabControl.TabIndex = 3;
+            tabControl.TabIndex = 0;
             // 
             // TapPageProdouct
             // 
@@ -115,7 +115,7 @@
             dgvProducts.Name = "dgvProducts";
             dgvProducts.ReadOnly = true;
             dgvProducts.Size = new Size(845, 201);
-            dgvProducts.TabIndex = 2;
+            dgvProducts.TabIndex = 0;
             // 
             // ID
             // 
@@ -176,7 +176,7 @@
             groupBoxAmont.Location = new Point(345, 6);
             groupBoxAmont.Name = "groupBoxAmont";
             groupBoxAmont.Size = new Size(508, 226);
-            groupBoxAmont.TabIndex = 1;
+            groupBoxAmont.TabIndex = 2;
             groupBoxAmont.TabStop = false;
             groupBoxAmont.Text = "Mini انبار";
             // 
@@ -185,7 +185,7 @@
             ListBuyProducts.Location = new Point(6, 13);
             ListBuyProducts.Name = "ListBuyProducts";
             ListBuyProducts.Size = new Size(159, 24);
-            ListBuyProducts.TabIndex = 11;
+            ListBuyProducts.TabIndex = 0;
             ListBuyProducts.Text = "لیست کالا های خریداری شده";
             ListBuyProducts.UseVisualStyleBackColor = true;
             ListBuyProducts.Click += ListBuyProducts_Click;
@@ -196,7 +196,7 @@
             NumProfitEdit.Maximum = new decimal(new int[] { 1215752192, 23, 0, 0 });
             NumProfitEdit.Name = "NumProfitEdit";
             NumProfitEdit.Size = new Size(204, 23);
-            NumProfitEdit.TabIndex = 10;
+            NumProfitEdit.TabIndex = 5;
             NumProfitEdit.ThousandsSeparator = true;
             // 
             // label5
@@ -205,7 +205,7 @@
             label5.Location = new Point(122, 154);
             label5.Name = "label5";
             label5.Size = new Size(33, 15);
-            label5.TabIndex = 0;
+            label5.TabIndex = 8;
             label5.Text = "ردیف";
             // 
             // label1
@@ -214,7 +214,7 @@
             label1.Location = new Point(462, 31);
             label1.Name = "label1";
             label1.Size = new Size(40, 15);
-            label1.TabIndex = 0;
+            label1.TabIndex = 9;
             label1.Text = "نام کالا";
             // 
             // NumPriceEdit
@@ -223,7 +223,7 @@
             NumPriceEdit.Maximum = new decimal(new int[] { 1215752192, 23, 0, 0 });
             NumPriceEdit.Name = "NumPriceEdit";
             NumPriceEdit.Size = new Size(204, 23);
-            NumPriceEdit.TabIndex = 9;
+            NumPriceEdit.TabIndex = 4;
             NumPriceEdit.ThousandsSeparator = true;
             // 
             // label2
@@ -232,7 +232,7 @@
             label2.Location = new Point(468, 69);
             label2.Name = "label2";
             label2.Size = new Size(33, 15);
-            label2.TabIndex = 1;
+            label2.TabIndex = 10;
             label2.Text = "تعداد";
             // 
             // NumIdEdit
@@ -241,7 +241,7 @@
             NumIdEdit.Maximum = new decimal(new int[] { 1215752192, 23, 0, 0 });
             NumIdEdit.Name = "NumIdEdit";
             NumIdEdit.Size = new Size(75, 23);
-            NumIdEdit.TabIndex = 8;
+            NumIdEdit.TabIndex = 1;
             NumIdEdit.ThousandsSeparator = true;
             // 
             // NumCountEdit
@@ -250,7 +250,7 @@
             NumCountEdit.Maximum = new decimal(new int[] { 1215752192, 23, 0, 0 });
             NumCountEdit.Name = "NumCountEdit";
             NumCountEdit.Size = new Size(204, 23);
-            NumCountEdit.TabIndex = 8;
+            NumCountEdit.TabIndex = 3;
             NumCountEdit.ThousandsSeparator = true;
             // 
             // BtnDelete
@@ -258,7 +258,7 @@
             BtnDelete.Location = new Point(31, 187);
             BtnDelete.Name = "BtnDelete";
             BtnDelete.Size = new Size(124, 28);
-            BtnDelete.TabIndex = 4;
+            BtnDelete.TabIndex = 7;
             BtnDelete.Text = "حذف";
             BtnDelete.UseVisualStyleBackColor = true;
             BtnDelete.Click += BtnDelete_Click;
@@ -268,7 +268,7 @@
             BtnEdit.Location = new Point(208, 187);
             BtnEdit.Name = "BtnEdit";
             BtnEdit.Size = new Size(204, 28);
-            BtnEdit.TabIndex = 5;
+            BtnEdit.TabIndex = 6;
             BtnEdit.Text = "ویرایش";
             BtnEdit.UseVisualStyleBackColor = true;
             BtnEdit.Click += BtnEdit_Click;
@@ -279,7 +279,7 @@
             label3.Location = new Point(441, 110);
             label3.Name = "label3";
             label3.Size = new Size(61, 15);
-            label3.TabIndex = 2;
+            label3.TabIndex = 11;
             label3.Text = "قیمت خرید";
             // 
             // TxtNameEdit
@@ -287,7 +287,7 @@
             TxtNameEdit.Location = new Point(208, 28);
             TxtNameEdit.Name = "TxtNameEdit";
             TxtNameEdit.Size = new Size(204, 23);
-            TxtNameEdit.TabIndex = 7;
+            TxtNameEdit.TabIndex = 2;
             // 
             // label4
             // 
@@ -295,7 +295,7 @@
             label4.Location = new Point(441, 146);
             label4.Name = "label4";
             label4.Size = new Size(60, 15);
-            label4.TabIndex = 3;
+            label4.TabIndex = 12;
             label4.Text = "درصد سود";
             // 
             // groupBoxAddProducts
@@ -322,7 +322,7 @@
             NumProductProfit.Maximum = new decimal(new int[] { 1215752192, 23, 0, 0 });
             NumProductProfit.Name = "NumProductProfit";
             NumProductProfit.Size = new Size(204, 23);
-            NumProductProfit.TabIndex = 10;
+            NumProductProfit.TabIndex = 3;
             NumProductProfit.ThousandsSeparator = true;
             // 
             // NumProductBuy
@@ -331,7 +331,7 @@
             NumProductBuy.Maximum = new decimal(new int[] { 1215752192, 23, 0, 0 });
             NumProductBuy.Name = "NumProductBuy";
             NumProductBuy.Size = new Size(204, 23);
-            NumProductBuy.TabIndex = 9;
+            NumProductBuy.TabIndex = 2;
             NumProductBuy.ThousandsSeparator = true;
             // 
             // NumProductCount
@@ -340,7 +340,7 @@
             NumProductCount.Maximum = new decimal(new int[] { 1215752192, 23, 0, 0 });
             NumProductCount.Name = "NumProductCount";
             NumProductCount.Size = new Size(204, 23);
-            NumProductCount.TabIndex = 8;
+            NumProductCount.TabIndex = 1;
             NumProductCount.ThousandsSeparator = true;
             // 
             // TxtProductName
@@ -348,14 +348,14 @@
             TxtProductName.Location = new Point(20, 28);
             TxtProductName.Name = "TxtProductName";
             TxtProductName.Size = new Size(204, 23);
-            TxtProductName.TabIndex = 7;
+            TxtProductName.TabIndex = 0;
             // 
             // BtnAdd
             // 
             BtnAdd.Location = new Point(20, 187);
             BtnAdd.Name = "BtnAdd";
             BtnAdd.Size = new Size(204, 28);
-            BtnAdd.TabIndex = 6;
+            BtnAdd.TabIndex = 4;
             BtnAdd.Text = "افزودن";
             BtnAdd.UseVisualStyleBackColor = true;
             BtnAdd.Click += BtnAdd_Click;
@@ -366,7 +366,7 @@
             LblProfitProduct.Location = new Point(253, 146);
             LblProfitProduct.Name = "LblProfitProduct";
             LblProfitProduct.Size = new Size(60, 15);
-            LblProfitProduct.TabIndex = 3;
+            LblProfitProduct.TabIndex = 8;
             LblProfitProduct.Text = "درصد سود";
             // 
             // LblBuyProduct
@@ -375,7 +375,7 @@
             LblBuyProduct.Location = new Point(253, 110);
             LblBuyProduct.Name = "LblBuyProduct";
             LblBuyProduct.Size = new Size(61, 15);
-            LblBuyProduct.TabIndex = 2;
+            LblBuyProduct.TabIndex = 7;
             LblBuyProduct.Text = "قیمت خرید";
             // 
             // LblCountProduct
@@ -384,7 +384,7 @@
             LblCountProduct.Location = new Point(280, 69);
             LblCountProduct.Name = "LblCountProduct";
             LblCountProduct.Size = new Size(33, 15);
-            LblCountProduct.TabIndex = 1;
+            LblCountProduct.TabIndex = 6;
             LblCountProduct.Text = "تعداد";
             // 
             // LblNameProduct
@@ -393,7 +393,7 @@
             LblNameProduct.Location = new Point(274, 31);
             LblNameProduct.Name = "LblNameProduct";
             LblNameProduct.Size = new Size(40, 15);
-            LblNameProduct.TabIndex = 0;
+            LblNameProduct.TabIndex = 5;
             LblNameProduct.Text = "نام کالا";
             // 
             // tabPage2
@@ -414,7 +414,7 @@
             toolStrip1.Name = "toolStrip1";
             toolStrip1.RenderMode = ToolStripRenderMode.Professional;
             toolStrip1.Size = new Size(869, 25);
-            toolStrip1.TabIndex = 4;
+            toolStrip1.TabIndex = 1;
             toolStrip1.Text = "toolStrip1";
             // 
             // toolStripDropDownButton
